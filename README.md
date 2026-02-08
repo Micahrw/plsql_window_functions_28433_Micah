@@ -12,7 +12,6 @@ Submission Date: February 08, 2026
 
 📋 Table of Contents
 - [Business Problem](#business-problem)
-- [Success Criteria](#success-criteria)
 - [Database Schema](#database-schema)
 - [SQL JOINs Implementation](#sql-joins-implementation)
 - [Window Functions Implementation](#window-functions-implementation)
