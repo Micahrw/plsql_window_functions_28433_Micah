@@ -6,7 +6,7 @@ Instructor: Eric Maniraguha
 Student: Rwema Ntibagwe Micah  
 Student ID: 28433  
 Group: A 
-Submission Date: February 08, 2025
+Submission Date: February 08, 2026
 
 ---
 
@@ -118,10 +118,8 @@ INNER JOIN Customers c ON o.customer_id = c.customer_id
 INNER JOIN Restaurants r ON o.restaurant_id = r.restaurant_id
 WHERE o.order_status = 'completed'
 ORDER BY o.order_date DESC;
-```
+``` 
 
-**Result Screenshot:**  
-![Inner Join Results](screenshots/joins/01_inner_join.png)
 
 **Interpretation:**  
 This query returns only successful orders where we have complete information about both the customer and restaurant. It helps identify active business relationships and transaction patterns.
@@ -143,8 +141,6 @@ GROUP BY c.customer_id, c.first_name || ' ' || c.last_name
 HAVING COUNT(o.order_id) = 0;
 ```
 
-**Result Screenshot:**  
-![Left Join Results](screenshots/joins/02_left_join.png)
 
 **Interpretation:**  
 Customers who registered but never ordered represent a lost opportunity. Marketing can target these users with welcome promotions or special discounts to activate them.
@@ -164,9 +160,6 @@ SELECT
 FROM Orders o RIGHT JOIN Restaurants r ON o.restaurant_id = r.restaurant_id group by r.restaurant_id, r.restaurant_name 
 HAVING COUNT(o.order_id) = 0; 
 ```
-
-**Result Screenshot:**  
-![Right Join Results](screenshots/joins/03_right_join.png)
 
 **Interpretation:**  
 Restaurants with zero orders indicate potential issues such as poor visibility, bad ratings, or unpopular cuisine. Management can either provide marketing support or remove them from the platform.
@@ -190,9 +183,6 @@ FULL OUTER JOIN Orders o ON c.customer_id = o.customer_id
 FULL OUTER JOIN Restaurants r ON o.restaurant_id = r.restaurant_id
 ORDER BY customer_id;
 ```
-
-**Result Screenshot:**  
-![Full Outer Join Results](screenshots/joins/04_full_outer_join.png)
 
 **Interpretation:**  
 This audit query reveals data quality issues. Orphaned orders (orders without customers) indicate referential integrity problems that need immediate attention.
@@ -225,9 +215,6 @@ JOIN Restaurants r2 ON o2.restaurant_id = r2.restaurant_id
 WHERE c1.city = c2.city
 ORDER BY o1.order_date DESC, c1.city;
 ```
-
-**Result Screenshot:**  
-![Self Join Results](screenshots/joins/05_self_join.png)
 
 **Interpretation:**  
 Clustering of orders by location and time enables delivery batching for efficiency. Multiple orders in the same city on the same day can share delivery routes, reducing costs and improving delivery times.
@@ -460,24 +447,9 @@ NTILE(4) divides customers into 4 equal groups for targeted marketing:
 
 **Declaration:**
 
-I, **[Your Full Name]**, student ID **[Your Student ID]**, hereby declare that:
-
-1. All SQL code implementations in this project represent my original work and understanding.
-
-2. All sources consulted during research have been properly cited in the References section.
-
-3. I have not copied code from online sources, other students, or AI tools without proper attribution and adaptation.
-
-4. No AI-generated content (ChatGPT, Claude, etc.) was used to generate answers or code without substantial modification and understanding.
-
-5. The analysis, interpretations, and business insights are based on my own critical thinking and understanding of the data.
-
-6. All screenshots are from my own SQL Developer environment running my own queries.
-
-This work complies with AUCA's academic integrity policies and the assignment guidelines provided by Instructor Eric Maniraguha.
-
-**Signature:** _____________________  
-**Date:** February 06, 2025
+I, **Rwema Ntibagwe Micah**, student ID **28433**, hereby declare that:
+All sources were properly cited. Implementations and analysis represent original work. No AI
+generated content was copied without attribution or adaptation.
 
 ---
 
@@ -487,19 +459,18 @@ This work complies with AUCA's academic integrity policies and the assignment gu
 ![Tables Created](screenshots/proof/tables_created.png)
 
 ### JOIN Query Execution
-![JOIN in SQL Developer](screenshots/proof/joins_execution.png)
+![JOIN in SQL Developer](screenshots/joins/01_inner_join.png)
 
 ### Window Functions Output
-![Window Functions Results](screenshots/proof/window_functions_output.png)
+![Window Functions Results](screenshots/window_functions/04_distribution.png)
 
 ---
 
 ## 📧 Contact
 
-**Student:** [Your Full Name]  
-**Email:** [your.email@auca.ac.rw]  
-**GitHub:** [@your-github-username](https://github.com/your-username)  
-**LinkedIn:** [Your LinkedIn Profile]
+**Student:** Rwema Ntibagwe Micah  
+**Email:** rwemamicah@gmail.com  
+
 
 ---
 
@@ -509,8 +480,8 @@ This project is submitted as academic coursework for INSY 8311 at AUCA and is no
 
 ---
 
-**Repository Link:** https://github.com/[your-username]/plsql_window_functions_[studentid]_[firstname]
+**Repository Link:** https://github.com/Micahrw/plsql_window_functions_28433_Micah
 
-**Submission Date:** February 06, 2025  
+**Submission Date:** February 08, 2026  
 **Course:** INSY 8311 - Database Development with PL/SQL  
 **Institution:** Adventist University of Central Africa (AUCA)
