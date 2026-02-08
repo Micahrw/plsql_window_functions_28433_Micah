@@ -253,9 +253,6 @@ FROM (
 ORDER BY total_spent DESC;
 ```
 
-**Result Screenshot:**  
-![Ranking Functions](screenshots/window_functions/01_ranking.png)
-
 **Interpretation:**  
 - ROW_NUMBER gives unique sequential numbers even for ties
 - RANK shares rank for ties but skips next numbers (1,2,2,4)
@@ -377,9 +374,6 @@ WHERE o.order_status = 'completed'
 GROUP BY c.customer_id, c.first_name, c.last_name
 ORDER BY total_spent DESC;
 ```
-
-**Result Screenshot:**  
-![Distribution Functions](screenshots/window_functions/04_distribution.png)
 
 **Interpretation:**  
 NTILE(4) divides customers into 4 equal groups for targeted marketing:
