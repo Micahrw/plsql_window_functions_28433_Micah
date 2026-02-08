@@ -252,6 +252,8 @@ FROM (
 )
 ORDER BY total_spent DESC;
 ```
+**Result Screenshot:**  
+![Ranking Functions](screenshots/window_functions/01_ranking.png)
 
 **Interpretation:**  
 - ROW_NUMBER gives unique sequential numbers even for ties
@@ -309,8 +311,8 @@ SELECT
 FROM Orders
 WHERE order_status = 'completed'
 GROUP BY TO_CHAR(order_date, 'YYYY-MM')
-ORDER BY order_month;```
-
+ORDER BY order_month;
+```
 **Result Screenshot:**  
 ![Aggregate Window Functions](screenshots/window_functions/02_aggregate.png)
 
@@ -337,7 +339,8 @@ SELECT
 FROM Orders o
 JOIN Customers c ON o.customer_id = c.customer_id
 WHERE o.order_status = 'completed'
-ORDER BY c.customer_id, o.order_date;```
+ORDER BY c.customer_id, o.order_date;
+```
 
 **Result Screenshot:**  
 ![Navigation Functions](screenshots/window_functions/03_navigation.png)
@@ -374,6 +377,8 @@ WHERE o.order_status = 'completed'
 GROUP BY c.customer_id, c.first_name, c.last_name
 ORDER BY total_spent DESC;
 ```
+**Result Screenshot:**  
+![Distribution Functions](screenshots/window_functions/04_distribution.png)
 
 **Interpretation:**  
 NTILE(4) divides customers into 4 equal groups for targeted marketing:
