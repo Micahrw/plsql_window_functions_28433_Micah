@@ -448,9 +448,6 @@ generated content was copied without attribution or adaptation.
 
 ## 📸 Selected Screenshots - Proof of Personal Work
 
-### Database Setup
-![Tables Created](screenshots/proof/tables_created.png)
-
 ### JOIN Query Execution
 ![JOIN in SQL Developer](screenshots/joins/01_inner_join.png)
 
